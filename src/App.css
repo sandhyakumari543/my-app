@@ -11,7 +11,6 @@
 body {
   font-family: 'Arial', sans-serif;
   text-align: center;
-  /* background-color: #f4f4f4; */
   background-color: #00001a;
 }
 
@@ -46,10 +45,6 @@ body {
   margin-top: 44px;
 }
 
-#profile {
-  font-size: 11px;
-  cursor: pointer;
-}
 
 #vehicleConatiner {
   padding: 20px;
@@ -57,12 +52,12 @@ body {
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 50px ;
+  margin: 50px;
 }
 
 h1 {
   margin-top: 50px;
-  color: white;
+  color: black;
 }
 
 label {
@@ -83,7 +78,7 @@ button {
 
 
 button {
-  background-color: #4caf50;
+  background-color: #1d1c60;
   color: white;
   border: none;
   border-radius: 4px;
@@ -92,15 +87,17 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #9ea8fe;
 }
 
 #result {
   margin-top: 25px
 }
-li{
+
+li {
   list-style: none;
 }
+
 /* Toll tax page css */
 
 .toll-tax-container {
@@ -109,13 +106,15 @@ li{
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 50px ;
-  
+  margin: 50px;
+
 
 }
+
 h1 {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
+
 .description {
   font-size: 18px;
   margin-bottom: 15px;
@@ -143,10 +142,45 @@ li {
   border-radius: 8px;
   background-color: #f9f9f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 50px ;
+  margin: 50px;
 }
 
 .sett {
   margin-bottom: 20px;
   color: #00001a;
+}
+
+
+/* Profile css */
+.user-profile {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 50px;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+h2 {
+  margin-bottom: 7px;
+}
+
+.userInfo {
+  margin-top: 22px;
+}
+
+.userEditConatiner {
+  margin-top: 32px;
+}
+#bio{
+  width: 55%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }

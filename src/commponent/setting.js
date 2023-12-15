@@ -22,7 +22,6 @@ const Settings = () => {
         </li>
       </ul>
 
-      {/* Add more items as needed */}
 
       <div className="explore-message">
         <p>

@@ -6,7 +6,8 @@ const TollCalculator = () => {
 
     const [vehicleType, setVehicleType] = useState('')
     const [distance, setDistance] = useState('');
-    const [tollFee, setTollFree] = useState(null);
+    const [tollFee, setTollFee] = useState(null);
+    const[showError,setShowError]=useState(false)
 
 
 
@@ -18,9 +19,15 @@ const TollCalculator = () => {
         };
 
         const rate = rateMap[vehicleType];
-        const calculateFee = rate * parseFloat(distance);
 
-        setTollFree(calculateFee.toFixed(2));
+        if (rate !== undefined && distance !== '') {
+            const calculateFee = rate * parseFloat(distance);
+            setTollFee(calculateFee.toFixed(2));
+            setShowError(false);
+        } else {
+            setTollFee(null);
+            setShowError(true);
+        }
     }
 
     function handleChange(e) {
@@ -34,8 +41,8 @@ const TollCalculator = () => {
 
     return (
         <div className='tollCalculator'>
-                <h1>Toll Calculator</h1>
             <div id='vehicleConatiner'>
+                <h1>Toll Calculator</h1>
             <label>Vehicle Type </label>
             <select value={vehicleType} onChange={handleChange}>
                 <option value="select"></option>
@@ -48,7 +55,13 @@ const TollCalculator = () => {
 
             <button  onClick={calculateToll}>Calculate Toll</button>
 
-            {tollFee !== null && (
+            {showError && (
+                <div id="error">
+                    <p>Please select a valid vehicle type and enter a distance.</p>
+                    </div>
+            )}
+
+            {tollFee !== null &&  !showError &&(
                 <div id="result">
                     <h2>Toll Fee:</h2>
                     <p>${tollFee}</p>
